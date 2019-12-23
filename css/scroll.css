@@ -1,0 +1,21 @@
+.scroll {
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+   	white-space: nowrap;
+   	overflow: hidden;
+}
+.scroll span {
+    display: inline-block;
+    /*inline样式不能使用动画*/
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+    	transform: translateX(200px)
+    }
+    to {
+    	transform: translateX(-100%)
+    }
+}
