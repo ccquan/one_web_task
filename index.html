@@ -366,6 +366,7 @@
 		</div>
 		</div>
 		<img src="images/tianyi.gif" id="tianyi">
+		<img src="images/public/returnTop.png" id="returnTop">
 		<!-- 轮播的 -->
 		<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
 		<script src="js/imagesloaded.js"></script>
@@ -406,6 +407,7 @@
 		<!-- 底部导航jquery -->
 		<script type="text/javascript">
 			$(document).ready(function(){
+				// 底部导航点击
 				$('#jump_new_c_left_content>ul>li>a').click(function(){
 					$(this).addClass('pub_select');
 					$(this).parent('li').siblings('li').children('a').removeClass('pub_select');
@@ -415,57 +417,25 @@
 					var zi = name.substr(0, index);  //字符串从0到最后一个_
 					$('#' + zi).show();
 				});
-				// $("#now_new_li").click(function(){
-				// 	$('#now_new').show();
-				// 	$('#edit_new').hide();
-				// 	$('#site_update_new').hide();
-				// 	$('#now_new_li>a').css({
-				// 		"background-color": "#66CCFF",
-				// 		"color": "#FFFFFF"
-				// 	});
-				// 	$('#edit_new_li>a').css({
-				// 		"background-color": "#fff",
-				// 		"color": "#000"
-				// 	});
-				// 	$('#site_update_new_li>a').css({
-				// 		"background-color": "#fff",
-				// 		"color": "#000"
-				// 	});
-				// });
-				// $("#site_update_new_li").click(function(){
-				// 	$('#now_new').hide();
-				// 	$('#edit_new').hide();
-				// 	$('#site_update_new').show();
-				// 	$('#site_update_new_li>a').css({
-				// 		"background-color": "#66CCFF",
-				// 		"color": "#FFFFFF"
-				// 	});
-				// 	$('#now_new_li>a').css({
-				// 		"background-color": "#fff",
-				// 		"color": "#000"
-				// 	});
-				// 	$('#edit_new_li>a').css({
-				// 		"background-color": "#fff",
-				// 		"color": "#000"
-				// 	});
-				// });
-				// $('#edit_new_li').click(function(){
-				// 	$('#now_new').hide();
-				// 	$('#site_update_new').hide();
-				// 	$('#edit_new').show();
-				// 	$('#edit_new_li>a').css({
-				// 		"background-color": "#66CCFF",
-				// 		"color": "#FFFFFF"
-				// 	});
-				// 	$('#site_update_new_li>a').css({
-				// 		"background-color": "#fff",
-				// 		"color": "#000"
-				// 	});
-				// 	$('#now_new_li>a').css({
-				// 		"background-color": "#fff",
-				// 		"color": "#000"
-				// 	});
-				// });
+				// 返回顶部
+				$(window).scroll(function(){
+					console.log($(this).scrollTop());
+					if($(this).scrollTop() >= 100)
+					{
+						$('#returnTop').css({
+							'display': "block"
+						});
+					}
+					else
+					{
+						$('#returnTop').css({
+							'display': "none"
+						});
+					}
+				});
+				$('#returnTop').click(function(){
+					$(window).scrollTop(0);
+				});
 			});
 		</script>
 	</body>

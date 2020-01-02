@@ -14,11 +14,12 @@ a{
 	background-color: #66CCFF;
 	background-image: linear-gradient(180deg, #7ef3c9, #66ccff);
 }
-#return{
+#returnTop{
 	position: fixed;
 	right: 20px;
 	bottom: 20px;
 	width: 80px;
+	display: none;
 }
 /* ****************************************************
 					index.html

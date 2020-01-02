@@ -178,5 +178,29 @@
 		</div>
 		</div>
 		<img src="images/tianyi.gif" id="tianyi">
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+		<img src="images/public/returnTop.png" id="returnTop">
+		<script type="text/javascript">
+			$(function(){
+				$(window).scroll(function(){
+					console.log($(this).scrollTop());
+					if($(this).scrollTop() >= 100)
+					{
+						$('#returnTop').css({
+							'display': "block"
+						});
+					}
+					else
+					{
+						$('#returnTop').css({
+							'display': "none"
+						});
+					}
+				});
+				$('#returnTop').click(function(){
+					$(window).scrollTop(0);
+				});
+			});
+		</script>
 	</body>
 </html>
